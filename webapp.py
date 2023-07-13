@@ -37,7 +37,7 @@ st.header('I. Giới thiệu chung')
 image_url = 'https://github.com/khuong253/final_project_data_visualization/blob/164a669f56b93b9717ad6b3f5dcbf04e307210b0/datascience.jpg?raw=true'
 response = requests.get(image_url)
 image = Image.open(BytesIO(response.content))
-image = Image.open('D:/HCMUS/ki2/trucquan/doan//datascience.jpg')
+
 st.image(image)
 st.write(
     '''
