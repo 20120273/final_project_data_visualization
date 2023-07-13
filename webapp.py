@@ -9,6 +9,7 @@ from PIL import Image
 import requests
 from io import BytesIO
 
+
 df = pd.read_csv('https://raw.githubusercontent.com/khuong253/final_project_data_visualization/Duong/data_science_asia_clean.csv',index_col=0)
 
 def convert_to_tuple(value):
@@ -826,3 +827,14 @@ st.write('''Nhận xét:
 ''')
 
 
+st.subheader(
+
+    'IV Demo Dashboard về ngành khoa học dữ liệu ở Việt Nam.'
+)
+image_url = 'https://github.com/20120273/final_project_data_visualization/blob/Duong/Dashboard.png?raw=true'
+response = requests.get(image_url)
+image = Image.open(BytesIO(response.content))
+st.image(image)
+link = 'https://public.tableau.com/app/profile/nguyen.dang.khuong/viz/DataScienceinAsia/Dashboard1?publish=yes&fbclid=IwAR3pot-R_FxLAz0jX_ls21-qYGiy__qfOL3DgRhkHUkV-pf9ISQ_f7f5TlQ'
+st.markdown(link, unsafe_allow_html=True)
+    
