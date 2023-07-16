@@ -590,7 +590,7 @@ def pie_pro(ax, country,data):
     custom_colors = sns.color_palette("Set3", len(data))
     ax.pie(data.values, colors=custom_colors, autopct='%1.1f%%', startangle=90)
     plt.axis('equal')
-    ax.set_title('Age Distribution of {}'.format(country))
+    ax.set_title('Education Percentage of {}'.format(country))
 
 fig, ax = plt.subplots(2,2, figsize=(10, 10))
 ax_flat = ax.flatten()
